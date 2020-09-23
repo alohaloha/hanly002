@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -22,10 +23,7 @@ class CreateFriendsTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-        // 松谷さん手本
-        // DB::statement("ALTER TABLE" . DB::getTablePrefix() . "friends COMMENT '友達'");
-        // メモ参照サイト手本
-        DB::statement("ALTER TABLE friends COMMENT '友達'");
+        DB::statement("ALTER TABLE " . DB::getTablePrefix() . "friends COMMENT '友だち'");
     }
 
     /**

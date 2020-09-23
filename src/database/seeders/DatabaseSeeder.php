@@ -13,8 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory(10)->create();
-        // php artisan make:seeder〜で作ったファイルを指定
-        $this->call([LocalDevelopSeeder::class]);
+        // \App\Models\User::factory(10)->create();
+        $this->call(LocalDevelopSeeder::class);
     }
 }
